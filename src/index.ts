@@ -1,11 +1,12 @@
 import "reflect-metadata";
 import express, { type Request, type Response, type Application } from "express";
-import nodeConfigs from "./configs/node.js";
-import AppDataSource from "./configs/database/data-source.js";
+
+import AppDataSource from "./data-source.js";
+import expressConfigs from "./configs/express.js";
 
 const app: Application = express();
 
-const { port } = nodeConfigs;
+const { port } = expressConfigs;
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Express & TypeScript Server");
