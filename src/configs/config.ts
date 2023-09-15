@@ -1,3 +1,3 @@
 import nodeConfigs from "./node.js";
 
-export { nodeConfigs };
+export default { nodeConfigs };
